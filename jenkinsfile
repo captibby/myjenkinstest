@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('create package')
             steps {
-                echo '${ENV}'
+                echo '${env}'
             }
         }    
     }
