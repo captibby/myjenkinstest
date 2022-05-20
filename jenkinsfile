@@ -1,18 +1,15 @@
+string[] env = env()
+
 pipeline {
     agent any
     parameters {
         string(name: 'envName', defaultValue: 'main', description: 'main,release,prod')
         string(name: 'testType', defaultValue: 'servicetest', description: 'servicetest or e2etest')
     }
-    environment {
-        servicetest = advisortest
-        e2etest = advisorteste2e
-        deploy_app = ${'testType'}
-    }
     stages {
         stage('create package')
             steps {
-                echo '$deploy_app'
+                echo '${ENV}'
             }
         }    
     }
