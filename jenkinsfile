@@ -20,5 +20,10 @@ pipeline {
                 echo 'Have a great Day!'
             }
         }
+        stage ('Send an email') {
+            steps {
+                emailext (to: 'zakariahmed226@gmail.com', replyTo: 'zakariahmed226@gmail.com', subject: "Email Report from - '${env.JOB_NAME}' ", body: readFile("target/surefire-reports/emailable-report.html"), mimeType: 'text/html');
+            }
+        }
     }
 }
