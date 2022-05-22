@@ -12,7 +12,7 @@ pipeline {
         }    
         stage ('stage2') {
             steps {
-                sh ('./Welcome.sh')
+                sh ('chmod +x && ./Welcome.sh')
             }
         }
         stage ('stage3') { 
