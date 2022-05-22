@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "Welcome to my first jenkins file"
+echo "I am doing well, thanks for asking!"

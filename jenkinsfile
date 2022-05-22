@@ -10,14 +10,14 @@ pipeline {
                 echo 'Hi, how are you ?'
             }
         }    
-        stage ('stage2') {
+        stage ('Response') {
             steps {
                 sh ('bash Welcome.sh')
             }
         }
-        stage ('stage3') { 
+        stage ('Farewell') { 
             steps {
-                echo 'weldone'
+                echo 'Have a great Day!'
             }
         }
     }
