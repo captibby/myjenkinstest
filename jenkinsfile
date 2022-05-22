@@ -10,12 +10,12 @@ pipeline {
                 echo 'Hi, how are you ?'
             }
         }    
-        stage {
+        stage ('stage2') {
             steps {
-                sh 'hi.sh'
+                sh '(./hi.sh)'
             }
         }
-        stage {
+        stage ('stage3') { 
             steps {
                 echo 'weldone'
             }
