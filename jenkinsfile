@@ -7,8 +7,18 @@ pipeline {
     stages {
         stage('Greetings')
             steps {
-                echo 'Hi, how are you doing today?'
+                echo 'Hi, how are you ?'
             }
         }    
+        stage {
+            steps {
+                sh 'hi.sh'
+            }
+        }
+        stage {
+            steps {
+                echo ''
+            }
+        }
     }
 }
