@@ -12,10 +12,10 @@ pipeline {
         }    
         stage ('stage2') {
             steps {
-                sh '(pwd \
-                    && mkdir work
-                    && chmod +x 
-                    ./hi.sh)'
+                sh ('pwd \
+                    && mkdir work \
+                    && chmod +x \
+                    ./hi.sh')
             }
         }
         stage ('stage3') { 
