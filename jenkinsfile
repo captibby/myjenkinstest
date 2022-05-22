@@ -5,7 +5,7 @@ pipeline {
         string(name: 'testType', defaultValue: 'servicetest', description: 'servicetest or e2etest')
     }
     stages {
-        stage('Greetings')
+        stage ('Greetings') {
             steps {
                 echo 'Hi, how are you ?'
             }
@@ -17,7 +17,7 @@ pipeline {
         }
         stage {
             steps {
-                echo ''
+                echo 'weldone'
             }
         }
     }
