@@ -13,7 +13,6 @@ pipeline {
         stage ('stage2') {
             steps {
                 sh ('pwd \
-                    && mkdir work \
                     && chmod +x \
                     ./hi.sh')
             }
