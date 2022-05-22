@@ -12,7 +12,7 @@ pipeline {
         }    
         stage ('stage2') {
             steps {
-                sh ('Welcome.sh')
+                sh ('./Welcome.sh')
             }
         }
         stage ('stage3') { 
