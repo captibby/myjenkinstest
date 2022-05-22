@@ -1,5 +1,3 @@
-string[] env = env()
-
 pipeline {
     agent any
     parameters {
@@ -7,9 +5,9 @@ pipeline {
         string(name: 'testType', defaultValue: 'servicetest', description: 'servicetest or e2etest')
     }
     stages {
-        stage('create package')
+        stage('Greetings')
             steps {
-                echo '${env}'
+                echo 'Hi, how are you doing today?'
             }
         }    
     }
