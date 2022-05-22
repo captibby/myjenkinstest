@@ -22,7 +22,12 @@ pipeline {
         }
         stage ('Send an email') {
             steps {
-                emailext (to: 'zakariahmed226@gmail.com', replyTo: 'zakariahmed226@gmail.com', subject: "Email Report from - '${env.JOB_NAME}' ", body: echo ("successful"), mimeType: 'text/html');
+                emailext attachLog: false, 
+                attachmentsPattern: 'example_file.yaml',
+                from: '<zakariahmed226@gmail.com>',
+                body: 'Test Message',
+                subject: 'Test Subject',
+                to: '<zakariahmed226@gmail.com>'
             }
         }
     }
