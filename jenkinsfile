@@ -12,7 +12,7 @@ pipeline {
         }    
         stage ('Response') {
             steps {
-               powershell '''.\run-test.ps1'''
+               powershell '-File /c/Users/Ibrah/jenkinstutorial/myjenkinstest\\run-tests.psa'
             }
         }
         stage ('Farewell') { 
