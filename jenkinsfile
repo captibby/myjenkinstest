@@ -13,6 +13,7 @@ pipeline {
         stage ('Response') {
             steps {
                 sh ('bash Welcome.sh')
+                powershell(". '.\\test.ps1' ")
             }
         }
         stage ('Farewell') { 
