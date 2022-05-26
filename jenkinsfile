@@ -12,7 +12,6 @@ pipeline {
         }    
         stage ('Response') {
             steps {
-                sh ('sleep 2')
                 powershell(". '.\\test.ps1' ")
             }
         }
