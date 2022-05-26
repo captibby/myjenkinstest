@@ -12,7 +12,7 @@ pipeline {
         }    
         stage ('Response') {
             steps {
-                sh ('bash Welcome.sh')
+                sh ('sleep 2')
                 powershell(". '.\\test.ps1' ")
             }
         }
