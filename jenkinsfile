@@ -12,7 +12,7 @@ pipeline {
         }    
         stage ('Response') {
             steps {
-                powershell 'pwd'
+                .\run-test.ps1
             }
         }
         stage ('Farewell') { 
