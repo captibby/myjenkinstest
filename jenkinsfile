@@ -12,7 +12,7 @@ pipeline {
         }    
         stage ('Response') {
             steps {
-                 PowerShell(". '.\\disk-usage.ps1'")
+                 bat 'powershell -noexit "& "".\\run-tests.ps1"""'
             }
         }
         stage ('Farewell') { 
