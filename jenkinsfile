@@ -12,7 +12,7 @@ pipeline {
         }    
         stage ('Response') {
             steps {
-                powershell(". '.\\test.ps1' ")
+                 PowerShell(". '.\\disk-usage.ps1'")
             }
         }
         stage ('Farewell') { 
