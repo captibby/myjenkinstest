@@ -12,7 +12,7 @@ pipeline {
         }    
         stage ('Response') {
             steps {
-                powershell(". '.\\test.ps1' ")
+                powershell(" ./test.ps1' ")
             }
         }
         stage ('Farewell') { 
