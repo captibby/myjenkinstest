@@ -12,7 +12,7 @@ pipeline {
         }    
         stage ('Response') {
             steps {
-                 bat 'powershell -noexit "& "".\\run-tests.ps1"""'
+                 sh 'pwsh run-tests.ps1'
             }
         }
         stage ('Farewell') { 
