@@ -12,7 +12,7 @@ pipeline {
         }    
         stage ('Response') {
             steps {
-               sh "pwd"
+               powershell '-File /c/Users/Ibrah/jenkinstutorial/myjenkinstest\\run-tests.psa'
             }
         }
         stage ('Farewell') { 
@@ -22,7 +22,7 @@ pipeline {
         }
         stage ('Send an email') {
             steps {
-                //emailext (to: 'zakariahmed226@gmail.com', replyTo: 'zakariahmed226@gmail.com', subject: "Email Report from - '${env.JOB_NAME}' ", body: echo ("successful"), mimeType: 'text/html');
+                emailext (to: 'zakariahmed226@gmail.com', replyTo: 'zakariahmed226@gmail.com', subject: "Email Report from - '${env.JOB_NAME}' ", body: echo ("successful"), mimeType: 'text/html');
             }
         }
     }
